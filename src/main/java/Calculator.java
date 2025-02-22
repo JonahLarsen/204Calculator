@@ -40,7 +40,14 @@ class Calculator {
     etc
      */
     int fibonacciNumberFinder(int n){
-        return 0;
+        int prev = 0;
+        int curr = 1;
+        for (int i = 1; i < n; i++) {
+            int temp = curr;
+            curr = curr + prev;
+            prev = temp;
+        }
+        return curr;
     }
 
 
